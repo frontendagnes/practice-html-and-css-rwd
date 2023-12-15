@@ -1,30 +1,44 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
     <title>devmentor.pl - HTML & CSS: RWD - #04</title>
 </head>
+
 <body>
-    
-    <nav>
-        <ul>
-            <li>
-                <a href="#">start</a>
-            </li>
-            <li>
-                <a href="#">oferta</a>
-                <ul>
-                    <li><a href="">strony internetowe</a></li>
-                    <li><a href="">pozycjonowanie stron www</a></li>
+    <nav class="normal-menu">
+        <ul class="level-one">
+            <li><a id="frist-child" href="#">start</a></li>
+            <li class="level-one--li"><a href="#">oferta <div class="rotate">&gt;</div></a>
+                <ul class="level-two">
+                    <li><a href="#">strony internetowe</a></li>
+                    <li class="level-two--li"><a href="#"><span>pozycjonowanie stron www</span></a>
+                    </li>
                 </ul>
             </li>
-            <li>
-                <a href="#">kontakt</a>
-            </li>
+            <li><a href="#">kontakt</a></li>
         </ul>
     </nav>
 
+    <nav class="mobile-menu">
+        <input id="menu__burger" class="menu__burger--input" type="checkbox" />
+        <label for="menu__burger" class="menu__burger--label"><span></span></label>
+        <ul class="level-one__mobile">
+            <li><a id="frist-child__mobile" href="#">start</a></li>
+            <li class="level-one--li__mobile"><a href="#">oferta ...</a>
+                <ul class="level-two__mobile">
+                    <li><a href="#">strony internetowe</a></li>
+                    <li><a href="#"><span>pozycjonowanie stron www</span></a>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">kontakt</a></li>
+        </ul>
+    </nav>
 </body>
+
 </html>
